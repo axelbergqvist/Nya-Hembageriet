@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Libre+Baskerville:ital@0;1&family=Nothing+You+Could+Do&display=swap');
+@import url("https://use.typekit.net/omp6djw.css");
+@import url('cabinet-grotesk.css');
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Baskerville', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    @media (max-width: 700px) {
+      overflow-x: hidden;
+    }
+}
+
+$mörkBrun: #2E1A09;
+$äggVita: #FDF6E4;
+$Blå: #409CC0;
+$Gul: #F8E684;
+
+body {
+    background: $mörkBrun;
+    #nav {
+        background: $mörkBrun;
+        position: fixed;
+        width: 100%;
+        padding: 2rem 2rem 1rem 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 10000;
+        .nav-item {
+            transition: all .2s ease-in-out;
+            font-family: 'CabinetGrotesk-Medium', 'Inter';
+            font-size: 1.25rem;
+            margin: 0 1rem;
+            color: $äggVita;
+            text-decoration: none;
+            &:hover {
+                opacity: 0.5;
+            }
+            @media (max-width: 700px) {
+              display: none;
+            }
+        }
+        .logo {
+            transition: all .2s ease-in-out;
+          margin-right: auto;
+          &:hover {
+            opacity: 0.5;
+        }
+        }
+      }
+    .hero {
+        z-index: -10000;
+        height: 105vh;
+        @media (max-width: 700px) {
+          height: 80vh;
+          overflow: hidden;
+        }
+        .content {
+            padding-top: 12rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 8rem;
+            padding-right: 8rem;
+            @media (max-width: 700px) {
+              padding: 12rem 1rem 8rem 1rem;
+            }
+            p {
+                color: $Gul;
+                font-family: 'Nothing You Could Do', cursive;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                @media (max-width: 700px) {
+                  font-size: 2rem;
+                  margin-bottom: 1rem;
+                }
+            }
+            h1 {
+                text-align: center;
+                color: $äggVita;
+                font-size: 9rem;
+                font-weight: 500;
+                @media (max-width: 700px) {
+                  font-size: 3.5rem;
+                }
+            }
+            img {
+                margin-top: -20rem;
+                width: 100%;
+                height: auto;
+                z-index: -99;
+                @media (max-width: 700px) {
+                  margin-top: 0rem;
+                  height: auto;
+                  width: 100vw;
+                }
+
+            }
+        }
+        
+    }
+    .about {
+        background: $äggVita;
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10rem 8rem 5rem 8rem;
+            gap: 9rem;
+            @media (max-width: 700px) {
+              padding: 8rem 1rem 4rem 1rem;
+              flex-direction: column;
+            }
+            .left {
+                width: 100%;
+                .overline {
+                    font-family: 'Nothing You Could Do', cursive;
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                }
+                h2 {
+                    color: $mörkBrun;
+                    font-size: 3.5rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                    @media (max-width: 700px) {
+                      font-size: 2.5rem;
+                    }
+                }
+                .body {
+                    font-family: 'CabinetGrotesk-Medium', 'Inter';
+                    line-height: 2rem;
+                    font-size: 1.25rem;
+                    color: $mörkBrun;
+                    margin-bottom: 2rem;
+                }
+                .button {
+                    display: inline-block;
+                    a {
+                      font-family: 'CabinetGrotesk-Medium', 'Inter';
+                      transition: all .35s ease-in-out;
+                        border-radius: 4rem;
+                        text-decoration: none;
+                        font-weight: 500;
+                        display: inline-block;
+                        font-size: 1.25rem;
+                        color: $äggVita;
+                        padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+                        background: $Blå;
+                        &:hover {
+                            background-color: $mörkBrun;
+                            color: $äggVita;
+                            transform: scale(0.95);
+                        }
+                    }
+
+                }
+            }
+            .right {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .usp {
+        background: $äggVita;
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 5rem 8rem 5rem 8rem;
+            gap: 6.5rem;
+            @media (max-width: 700px) {
+              padding: 4rem 1rem 4rem 1rem;
+              flex-direction: column;
+            }
+            .top {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                img {
+                    height: 120px;
+                    margin-bottom: 2rem;
+                }
+                h3 {
+                    text-align: center;
+                    color: $mörkBrun;
+                    font-size: 2.25rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                    @media (max-width: 700px) {
+                      font-size: 1.5rem;
+                    }
+                }
+                .body {
+                  font-family: 'CabinetGrotesk-Medium', 'Inter';
+                  line-height: 2rem;
+                    font-size: 1.25rem;
+                    color: $mörkBrun;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+            }
+            .right {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .findUs {
+      background: $äggVita;
+      .content {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 5rem 8rem 10rem 8rem;
+          gap: 9rem;
+          @media (max-width: 700px) {
+            padding: 4rem 1rem 4rem 1rem;
+            flex-direction: column;
+            gap: 4.5rem;
+          }
+          .left {
+              width: 100%;
+              .overline {
+                  font-family: 'Nothing You Could Do', cursive;
+                  font-size: 1.5rem;
+                  margin-bottom: .5rem;
+              }
+              h2 {
+                  color: $mörkBrun;
+                  font-size: 3.5rem;
+                  font-weight: 500;
+                  margin-bottom: 1rem;
+                  @media (max-width: 700px) {
+                    font-size: 2.5rem;
+                  }
+              }
+              .body {
+                font-family: 'CabinetGrotesk-Medium','Inter';
+                line-height: 2rem;
+                  font-size: 1.25rem;
+                  color: $mörkBrun;
+                  margin-bottom: 2rem;
+              }
+              .button {
+                  display: inline-block;
+                  a {
+                    font-family: 'CabinetGrotesk-Medium','Inter';
+                      transition: all .35s ease-in-out;
+                      border-radius: 4rem;
+                      text-decoration: none;
+                      font-weight: 500;
+                      display: inline-block;
+                      font-size: 1.25rem;
+                      color: $äggVita;
+                      padding: 1.25rem 2.5rem 1.25rem 2.5rem;
+                      background: $Blå;
+                      &:hover {
+                          background-color: $mörkBrun;
+                          color: $äggVita;
+                          transform: scale(0.95);
+                      }
+                  }
+              }
+          }
+          .right {
+              width: 100%;
+              img {
+                  width: 100%;
+              }
+          }
+      }
+  }
+  .timeline {
+    background: $äggVita;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 8rem 10rem 8rem;
+        gap: 2rem;
+        @media (max-width: 700px) {
+          padding: 4rem 1rem 4rem 1rem;
+          flex-direction: column;
+          gap: 4.5rem;
+        }
+        .left {
+            width: 60%;
+            @media (max-width: 700px) {
+              width: 100%;
+            }
+            .overline {
+                font-family: 'Nothing You Could Do', cursive;
+                font-size: 1.5rem;
+                margin-bottom: .5rem;
+            }
+            h2 {
+                color: $mörkBrun;
+                font-size: 3.5rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+                @media (max-width: 700px) {
+                  font-size: 2.5rem;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            .card {
+              flex: 0 0 auto;
+              width: 30%;
+              @media (max-width: 700px) {
+                width: 80%;
+              }
+              img {
+                margin-bottom: 1rem;
+                width: 100%;
+              }
+              h3 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+              }
+              .body {
+                font-family: 'CabinetGrotesk-Medium','Inter';
+                line-height: 2rem;
+                  font-size: 1.25rem;
+                  color: $mörkBrun;
+                  margin-bottom: 2rem;
+              }
+            }
+        }
+    }
+}
+    .timeline {
+      background: $äggVita;
+      .container {
+        padding: 5rem 8rem 5rem 8rem;
+        .title {
+          text-align: center;
+          margin-bottom: 5rem;
+          .overline {
+            font-family: 'Nothing You Could Do', cursive;
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+        }
+        h2 {
+            color: $mörkBrun;
+            font-size: 3.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            @media (max-width: 700px) {
+              font-size: 2.5rem;
+            }
+        }
+        }
+        img {
+          width: 100%;
+        } 
+      }
+    }
+    .footer {
+      background: $mörkBrun;
+      color: $äggVita;
+      .container {
+        padding: 10rem 16rem 10rem 16rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 10rem;
+        @media (max-width: 700px) {
+          padding: 4rem 1rem 4rem 1rem;
+          flex-direction: column;
+          gap: 4rem;
+        }
+        .left {
+          img {
+            width: 12rem;
+            -webkit-animation:spin 8s linear infinite;
+            -moz-animation:spin 8s linear infinite;
+            animation:spin 8s linear infinite;
+          }
+          @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+        }
+        .right {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 4rem;
+          }
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          
+          }
+          a {
+            margin-bottom: 1rem;
+            flex-direction: column;
+            display: flex;
+            font-family: 'CabinetGrotesk-Medium','Inter';
+            font-size: 1.25rem;
+            color: $äggVita;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .animate-reveal {
+        opacity: 0;
+        -webkit-animation: reveal 1.5s cubic-bezier(0.25, 2, 0.75, 1) 1 normal forwards;
+           -moz-animation: reveal 1.5s ease-in 1 normal forwards;
+             -o-animation: reveal 1.5s cubic-bezier(0.25, 1, 0.75, 1) 1 normal forwards;
+                animation: reveal 1.5s cubic-bezier(0.25, 1, 0.5, 1) 1 normal forwards;
+      }
+      
+      .animate-first {
+        -webkit-animation-delay: 0;
+           -moz-animation-delay: 0;
+             -o-animation-delay: 0;
+                animation-delay: 0;
+      }
+      
+      .animate-second {
+        -webkit-animation-delay: 200ms;
+           -moz-animation-delay: 200ms;
+             -o-animation-delay: 200ms;
+                animation-delay: 200ms;
+      }
+      
+      .animate-third {
+        -webkit-animation-delay: 400ms;
+           -moz-animation-delay: 400ms;
+             -o-animation-delay: 400ms;
+                animation-delay: 400ms;
+      }
+      .animate-fourth {
+        -webkit-animation-delay: 400ms;
+           -moz-animation-delay: 400ms;
+             -o-animation-delay: 400ms;
+                animation-delay: 400ms;
+      }
+      @-webkit-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @-moz-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @-o-keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+      @keyframes reveal {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100%);
+             -moz-transform: translateY(100%);
+               -o-transform: translateY(100%);
+                  transform: translateY(100%);
+        }
+        100% {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+             -moz-transform: translateY(0);
+               -o-transform: translateY(0);
+                  transform: translateY(0);
+        }
+      }
+    
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(26, 19, 16, .9);
+    }
+    .video-popup {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        border-radius: 4px;    
+        &.visible {
+            display: block;
+        }
+        .close {
+            position: absolute;
+            border-radius: 100rem;
+            right: 8px;
+            top: -24px;
+            font-weight: 900;
+            font-size: 40px;
+            color: $äggVita;
+            padding: 5px 10px;
+            border-bottom: none;
+            cursor: pointer;
+        }
+    }
+    .video-wrapper {
+        width: 60vw;
+        margin: 30px auto;
+        @media (max-width: 700px) {
+          width: 90vw;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 55.25%;
+            height: 0;
+            overflow: hidden;
+    
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .right::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  
+  .right::-webkit-scrollbar:vertical {
+      width: 12px;
+  }
+  
+  .right::-webkit-scrollbar:horizontal {
+      height: 12px;
+  }
+  
+  .right::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background-color: #663B14;
+  }
+  .right::-webkit-scrollbar-track {
+    background: #EEE6D0;
+    border-radius: 1rem;
+  }
+}
